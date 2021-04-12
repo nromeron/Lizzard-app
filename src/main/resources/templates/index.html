@@ -16,13 +16,23 @@
     />
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
         <a href="#" th:href="@{/}">
           <span class="navbar-brand mb-0 h1"
           >Módulo de registro e inicio de sesión</span
           >
         </a>
+
+        <ul class="nav navbar-nav">
+            <li sec:authorize="isAuthenticated()">
+                <a href="#" th:href="@{/logout}">
+                    Salir
+                </a>
+            </li>
+        </ul>
+
+
     </div>
 </nav>
 <div class="container">

@@ -3,6 +3,7 @@
         lang="es"
         xmlns="http://www.w3.org/1999/xhtml"
         xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaj-extras-springsecurity3"
 >
 <head>
     <meta charset="UTF-8" />
@@ -24,6 +25,9 @@
         </a>
     </div>
 </nav>
-
+<div class="container">
+    <h1>Aplicación web, utilizando spring boot, spring security, hibernate y MySQL</h1>
+    Bienvenido <span sec:authentication="principal.username">!</span>
+</div>
 </body>
 </html>
